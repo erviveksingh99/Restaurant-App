@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: API-Gateway
+     
+  cloud:
+    gateway:
+      routes:
+        - id: Restaurant-Api
+          uri: lb://RESTAURANT-SERVICE
+          predicates:
+            - Path=/restaurant/**
+        
+        - id: Order-Api
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/order/**
+          
+        - id: Payment-Api
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/payment/**  # Added space here to fix the issue
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ 
+    register-with-eureka: true
+    fetch-registry: true  
+
+server:
+  port: 3333

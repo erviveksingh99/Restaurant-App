@@ -1,0 +1,5 @@
+package com.order.customexception;
+
+public class NoResourceFoundException extends RuntimeException{
+
+}

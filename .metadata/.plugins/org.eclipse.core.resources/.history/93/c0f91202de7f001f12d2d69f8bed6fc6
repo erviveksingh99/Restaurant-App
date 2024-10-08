@@ -1,0 +1,9 @@
+package com.order.customexception;
+
+@SuppressWarnings("serial")
+//This the custome exception
+public class NoResourceFoundException extends RuntimeException{
+	public NoResourceFoundException(String msg) {
+		super(msg);
+	}
+}

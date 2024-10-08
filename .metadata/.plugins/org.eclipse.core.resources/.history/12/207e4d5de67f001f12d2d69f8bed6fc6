@@ -1,0 +1,5 @@
+package com.pay.error;
+
+public class ErrorDetails {
+
+}

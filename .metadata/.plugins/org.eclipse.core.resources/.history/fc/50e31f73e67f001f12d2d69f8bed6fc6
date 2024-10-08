@@ -1,0 +1,5 @@
+package com.pay.customexception;
+
+public class CustomeException {
+
+}

@@ -1,0 +1,32 @@
+server:
+  port: 9092
+
+spring:
+  application:
+    name: Order-Service
+
+  datasource:
+      url: jdbc:oracle:thin:@localhost:1521:xe
+      username: system
+      password: siwan
+      driver-class-name: oracle.jdbc.OracleDriver
+
+#  h2:
+#    console:
+#      enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true  #this is alos added new    
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
